@@ -1,6 +1,6 @@
 # Santhosh Kumar R — Portfolio
 
-Personal portfolio for sharing with hiring teams. Built with Vite and TypeScript, with a responsive editorial layout and no runtime JavaScript dependencies beyond the site itself.
+Personal portfolio for sharing with hiring teams. Built with Vite and TypeScript, with an engineering field-map visual identity and no runtime JavaScript dependencies beyond the site itself.
 
 ## Run locally
 
@@ -20,4 +20,4 @@ The production bundle is written to `dist/`. The source resume is published as `
 
 ## Content notes
 
-Professional history, product descriptions, technologies, contact links, and metrics are based on the supplied résumé. Hana and Juice are presented as work at Hanabi Technologies. Product interface artwork is illustrative and does not represent a live product screen.
+Professional history, product descriptions, technologies, contact links, and metrics are based on the supplied résumé. Project stories describe the engineering problem, contributions, and outcomes without using internal product names. All project visuals are original illustrations, not screenshots of live products.
