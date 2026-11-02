@@ -17,7 +17,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <div class="hero-grid page-wrap">
         <div class="hero-copy">
           <div class="eyebrow"><span>SOFTWARE ENGINEERING</span><span class="eyebrow-slash">/</span><span>3+ YEARS IN PRODUCTION</span></div>
-          <h1 id="hero-title">Thoughtful<br>engineering.<br><em>Reliable<span class="hero-title-mobile-break"><br></span> software.</em></h1>
+          <h1 id="hero-title">Thoughtful<br>engineering.<br><em>Reliable <span class="hero-title-mobile-word">software.</span></em></h1>
           <p class="hero-intro">Senior Software Developer building AI-powered systems, secure platforms, and connected-device products. I take work from the system design through the details people rely on.</p>
           <div class="hero-actions"><a class="button button-primary" href="#projects">See my projects ${arrow}</a><a class="resume-link" href="/Santhosh_Kumar_R_Resume.pdf" download>Download resume <span aria-hidden="true">↗</span></a></div>
           <div class="hero-contact"><span>DIRECT CONTACT</span><a href="tel:+918428497261">+91 84284 97261</a><span class="contact-divider">/</span><a href="mailto:drsanthosh1997@gmail.com">drsanthosh1997@gmail.com</a></div>
