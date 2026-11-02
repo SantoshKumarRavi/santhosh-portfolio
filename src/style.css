@@ -51,8 +51,8 @@
 /* Quiet motion gives the network graphic life and reveals detail as it enters view. */
 .hero-copy{animation:hero-enter .72s cubic-bezier(.2,.72,.22,1) both}
 .skill-map{animation:map-enter .9s cubic-bezier(.2,.72,.22,1) .08s both}
-.skill-map .skill-node{animation:node-enter .5s cubic-bezier(.2,.72,.22,1) calc(120ms + var(--node-index,0)*32ms) both}
-.map-lines path{animation:map-flow 32s linear infinite}
+.skill-map .skill-node{animation:node-enter .5s cubic-bezier(.2,.72,.22,1) calc(120ms + var(--node-index,0)*32ms) both,skill-beacon 5s ease-in-out calc(1.2s + var(--node-index,0)*120ms) infinite}
+.map-lines path{stroke:#819b88;stroke-width:1.5;stroke-dasharray:5 8;animation:map-flow 11s linear infinite}
 .map-lines circle{transform-box:fill-box;transform-origin:center;animation:map-pulse 3.8s ease-in-out infinite}
 .map-lines circle:nth-of-type(3n){animation-delay:1.2s}
 .map-lines circle:nth-of-type(3n + 1){animation-delay:2.3s}
@@ -65,12 +65,29 @@
 .reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
 .case-study{transition:border-color .25s ease,box-shadow .25s ease}
 .case-study:hover{border-color:#aab9ab;box-shadow:0 8px 24px rgba(24,42,36,.07)}
+.hero-actions a,.contact-actions a,.toolkit-heading>.resume-link{transition:transform .22s cubic-bezier(.2,.72,.22,1),color .22s,background-color .22s,border-color .22s}
+.hero-actions .button:hover,.contact-actions .button:hover{transform:translateY(-3px)}
+.resume-link{position:relative;transition:color .2s,border-color .2s}
+.resume-link:hover{color:#c94d25;border-color:var(--orange)}
+.resume-link span{display:inline-block;transition:transform .22s cubic-bezier(.2,.72,.22,1)}
+.resume-link:hover span,.resume-link:focus-visible span{transform:translate(3px,-2px)}
+.button svg{transition:transform .22s cubic-bezier(.2,.72,.22,1)}
+.button:hover svg,.button:focus-visible svg{transform:translateX(4px)}
+.contact-phone,.contact-email{transition:color .2s,border-color .2s}
+.contact-phone:hover,.contact-email:hover{color:#f7a180;border-color:#f2855e}
+.back-to-top{position:fixed;right:24px;bottom:24px;z-index:12;width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(244,241,233,.3);border-radius:50%;background:var(--deep);color:#f4f1e9;box-shadow:0 5px 18px rgba(14,31,23,.2);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,visibility .2s,transform .2s,background .2s}
+.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:#294b3b;transform:translateY(-3px)}
+.back-to-top svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 @keyframes hero-enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes map-enter{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes node-enter{from{opacity:0;translate:0 7px}to{opacity:1;translate:0 0}}
+@keyframes skill-beacon{0%,82%,100%{box-shadow:3px 3px 0 rgba(28,60,46,.1)}88%{box-shadow:0 0 0 3px rgba(243,107,62,.22),3px 3px 0 rgba(28,60,46,.1)}}
 @keyframes map-flow{to{stroke-dashoffset:-88}}
 @keyframes map-pulse{0%,100%{opacity:.52;scale:.78}50%{opacity:1;scale:1.38}}
 @keyframes status-beacon{0%,100%{box-shadow:0 0 0 4px rgba(243,107,62,.17)}50%{box-shadow:0 0 0 7px rgba(243,107,62,.035)}}
 @keyframes city-float{0%,100%{translate:0 0}50%{translate:0 -5px}}
 @keyframes data-travel{to{background-position:40px 0}}
-@media(prefers-reduced-motion:reduce){.hero-copy,.skill-map,.skill-map .skill-node,.map-lines path,.map-lines circle,.availability-dot,.city-network svg path,.city-center,.diagram-flow{animation:none!important}.reveal-on-scroll{opacity:1;transform:none;transition:none}.case-study{transition:none}}
+@media(prefers-reduced-motion:reduce){.hero-copy,.skill-map,.skill-map .skill-node,.map-lines path,.map-lines circle,.availability-dot,.city-network svg path,.city-center,.diagram-flow{animation:none!important}.reveal-on-scroll{opacity:1;transform:none;transition:none}.case-study,.hero-actions a,.contact-actions a,.resume-link,.resume-link span,.button svg,.contact-phone,.contact-email,.back-to-top{transition:none}}
+@media(max-width:650px){.back-to-top{right:15px;bottom:15px;width:38px;height:38px}.hero-grid{gap:22px}.skill-map{min-height:0;height:auto;aspect-ratio:1.07/1;padding:38px 8px 18px;gap:clamp(6px,2.5vw,11px) 4px}.skill-map .skill-node{font-size:clamp(7px,2vw,9px);min-height:29px;padding-inline:3px}.map-lines{opacity:.82}.hero-actions{flex-wrap:wrap}.hero-contact{line-height:1.7}.case-visual{min-height:clamp(245px,72vw,310px)}.contact-inner{padding-bottom:60px}.footer{flex-wrap:wrap}}
+@media(max-width:380px){.page-wrap,.section-wrap,.footer{width:calc(100% - 32px)}.topbar{padding-inline:12px}.topbar nav{gap:6px}.topbar nav a{font-size:7.5px}.topbar .phone-link{font-size:6.5px}.social-short{min-width:16px;height:16px}.skill-map{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px 2px;padding-inline:5px}.skill-map .skill-node{font-size:6.8px;letter-spacing:-.04em}.hero h1{font-size:clamp(43px,12vw,50px)}.hero-bottom{letter-spacing:.035em}}
