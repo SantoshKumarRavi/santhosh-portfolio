@@ -152,3 +152,14 @@ body{font-family:'Inter',Arial,sans-serif}
   .skill-map{min-height:390px;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px 3px;padding-inline:5px}
   .skill-map .skill-node{font-size:7px}
 }
+
+@media(max-width:650px){
+  .topbar .social-short{display:grid;place-items:center;overflow:hidden;padding:0;line-height:0}
+  .social-short svg{display:block;width:18px;height:18px;flex:none}
+  .github-mark{fill:#18352a}
+  .linkedin-mark{fill:#0a66c2}
+  .topbar .phone-link{display:grid;place-items:center;align-content:center;justify-content:center;flex:none;width:28px;height:28px;padding:0;line-height:0;font-size:0}
+  .phone-icon{display:block;width:16px;height:16px;flex:none;fill:#18352a;stroke:none}
+  .phone-number{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .topbar .phone-link::before{content:none}
+}
