@@ -38,3 +38,12 @@
 .skill-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-content:center;justify-items:center;gap:12px 8px;padding:44px 14px 38px}
 .skill-map .skill-node{position:relative;inset:auto;justify-self:center;max-width:100%;padding:0 8px}
 @media(max-width:650px){.skill-map{height:auto;min-height:390px;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 4px;padding:46px 8px 35px}.skill-map .skill-node{width:100%;max-width:90px;min-height:28px;padding:0 3px;font-size:7px;letter-spacing:-.03em}}
+
+.topbar .header-contact{gap:14px}
+.social-links{display:flex;align-items:center;gap:12px}
+.header-social{color:#4d5b54;font-size:10px;white-space:nowrap;transition:color .18s}
+.header-social:hover{color:#c94d25}
+.social-short{display:none}
+@media(max-width:900px){.topbar .header-contact{gap:8px}.social-links{gap:8px}.header-social{font-size:9px}.topbar .phone-link{font-size:8px}}
+@media(max-width:650px){.social-links{gap:6px}.header-social{font-family:var(--mono);font-size:8px}.social-full{display:none}.social-short{display:inline-grid;min-width:19px;height:19px;place-items:center;border:1px solid #c6d0c6;font-size:7px;letter-spacing:-.04em}.social-linkedin{font-family:Arial,sans-serif;font-weight:700;letter-spacing:-.08em}}
+@media(max-width:390px){.topbar .phone-link{font-size:7px}.social-links{gap:5px}.social-short{min-width:17px;height:17px;font-size:6px}}

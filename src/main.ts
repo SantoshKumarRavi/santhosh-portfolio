@@ -7,7 +7,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header class="topbar">
     <a class="wordmark" href="#top" aria-label="Santhosh Kumar, home">SK<span>/</span></a>
     <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a></nav>
-    <div class="header-contact"><a class="phone-link" href="tel:+918428497261" aria-label="Call Santhosh at +91 84284 97261">+91 84284 97261</a><a class="email-link" href="mailto:drsanthosh1997@gmail.com">Email ${arrow}</a></div>
+    <div class="header-contact"><div class="social-links" aria-label="Social profiles"><a class="header-social" href="https://github.com/SantoshKumarRavi" target="_blank" rel="noreferrer" aria-label="GitHub (opens in a new tab)"><span class="social-short" aria-hidden="true">GH</span><span class="social-full">GitHub ↗</span></a><a class="header-social" href="https://www.linkedin.com/in/santhosh-kumar-r-497233207" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><span class="social-short social-linkedin" aria-hidden="true">in</span><span class="social-full">LinkedIn ↗</span></a></div><a class="phone-link" href="tel:+918428497261" aria-label="Call Santhosh at +91 84284 97261">+91 84284 97261</a><a class="email-link" href="mailto:drsanthosh1997@gmail.com">Email ${arrow}</a></div>
   </header>
   <div class="availability"><span class="availability-dot"></span><strong>OPEN TO WORK</strong><span class="availability-copy">LOOKING FOR SENIOR SOFTWARE DEVELOPER ROLES</span><span class="availability-place">RASIPURAM, INDIA</span></div>
 
