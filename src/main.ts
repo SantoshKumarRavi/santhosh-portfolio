@@ -6,10 +6,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="topbar">
     <a class="wordmark" href="#top" aria-label="Santhosh Kumar, home">SK<span>/</span></a>
-    <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a></nav>
+    <nav class="main-nav" id="primary-navigation" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a></nav>
     <div class="header-contact"><div class="social-links" aria-label="Social profiles"><a class="header-social" href="https://github.com/SantoshKumarRavi" target="_blank" rel="noreferrer" aria-label="GitHub (opens in a new tab)"><span class="social-short" aria-hidden="true">GH</span><span class="social-full">GitHub ↗</span></a><a class="header-social" href="https://www.linkedin.com/in/santhosh-kumar-r-497233207" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in a new tab)"><span class="social-short social-linkedin" aria-hidden="true">in</span><span class="social-full">LinkedIn ↗</span></a></div><a class="phone-link" href="tel:+918428497261" aria-label="Call Santhosh at +91 84284 97261">+91 84284 97261</a><a class="email-link" href="mailto:drsanthosh1997@gmail.com">Email ${arrow}</a></div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </header>
-  <div class="availability"><span class="availability-dot"></span><strong>OPEN TO WORK</strong><span class="availability-copy">LOOKING FOR SENIOR SOFTWARE DEVELOPER ROLES</span><span class="availability-place">RASIPURAM, INDIA</span></div>
+  <div class="availability"><span class="availability-dot"></span><strong>OPEN TO WORK</strong><span class="availability-copy">LOOKING FOR SENIOR SOFTWARE DEVELOPER ROLES</span></div>
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
@@ -53,7 +54,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     <section class="contact-section" id="contact"><div class="section-wrap contact-inner"><div class="eyebrow">NEXT CHAPTER</div><h2>Let’s build software<br>people <em>depend on.</em></h2><p>Currently looking for Senior Software Developer roles.</p><div class="contact-actions"><a class="button button-light" href="mailto:drsanthosh1997@gmail.com">Start a conversation ${arrow}</a><a class="contact-phone" href="tel:+918428497261">+91 84284 97261</a><a class="contact-email" href="mailto:drsanthosh1997@gmail.com">drsanthosh1997@gmail.com</a></div><div class="contact-place">RASIPURAM, INDIA</div></div></section>
   </main>
-  <footer class="footer"><a class="wordmark" href="#top">SK<span>/</span></a><span class="footer-signoff">Made with <svg class="footer-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.3 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg> by Santhosh</span><div><a href="https://github.com/SantoshKumarRavi" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/santhosh-kumar-r-497233207" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
+  <footer class="footer"><a class="wordmark" href="#top">SK<span>/</span></a><span class="footer-signoff">Made with <svg class="footer-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.3 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg> by Santhosh</span></footer>
   <a class="back-to-top" href="#top" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4m-6 6 6-6 6 6"/></svg></a>
 `
 
@@ -86,3 +87,23 @@ const backToTop = document.querySelector<HTMLAnchorElement>('.back-to-top')!
 const updateBackToTop = () => backToTop.classList.toggle('is-visible', window.scrollY > 520)
 window.addEventListener('scroll', updateBackToTop, { passive: true })
 updateBackToTop()
+
+const topbar = document.querySelector<HTMLElement>('.topbar')!
+const menuToggle = document.querySelector<HTMLButtonElement>('.menu-toggle')!
+const closeMenu = () => {
+  topbar.classList.remove('menu-open')
+  menuToggle.setAttribute('aria-expanded', 'false')
+  menuToggle.setAttribute('aria-label', 'Open navigation menu')
+}
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true'
+  topbar.classList.toggle('menu-open', !isOpen)
+  menuToggle.setAttribute('aria-expanded', String(!isOpen))
+  menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu')
+})
+
+document.querySelectorAll<HTMLAnchorElement>('.main-nav a').forEach((link) => link.addEventListener('click', closeMenu))
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeMenu()
+})
