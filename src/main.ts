@@ -45,16 +45,41 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div class="case-copy"><div class="case-index">02 <span>/</span> CONNECTED MOBILITY</div><h3>Power sharing,<br>connected at scale</h3><p class="case-lede">Reliable access to mobile charging, built into the everyday city.</p><div class="case-scale"><strong>260K+</strong><span>users across<br>80+ cities</span></div><p class="case-detail">Architected the platform system design supporting 600+ stations and more than 400K rental hours. Implemented MQTT-based communication for real-time exchange with IoT devices.</p><div class="tag-list"><span>MQTT</span><span>IoT</span><span>Node.js</span><span>Cloud systems</span></div></div>
       </article>
       <article class="result-strip"><div class="result-figure"><span>≈</span>50<span class="result-unit">%</span></div><div class="result-copy"><div class="case-index">03 / SEARCH PERFORMANCE</div><h3>Fewer passes. Faster retrieval.</h3><p>Replaced an iterative, multi-pass legal citation retrieval process with a single direct-search approach, cutting retrieval time by approximately 50%.</p></div><div class="result-note">MEASURED<br>IMPROVEMENT</div></article>
-      <div class="work-attribution"><span>PRODUCT ENGINEERING / HANABI TECHNOLOGIES</span><span>JUN 2023 — PRESENT</span></div>
+      <div class="work-attribution"><span>PRODUCT ENGINEERING / HANABI TECHNOLOGIES</span><span>JUN 2023 — OCT 2026</span></div>
     </section>
 
     <section class="approach-section"><div class="section-wrap approach-grid"><div class="approach-intro"><div class="eyebrow section-kicker">02 / HOW I ENGINEER</div><h2>Make the hard parts<br><em>hold together.</em></h2><p>I work across the boundaries that make software dependable: data, security, integrations, and the interface people actually use.</p></div><div class="approach-list"><article><span>01</span><div><h3>Design for the full system</h3><p>Architecture that accounts for tenants, traffic, data, and change.</p></div></article><article><span>02</span><div><h3>Secure the everyday paths</h3><p>OAuth, role-based access, billing, and careful integration work.</p></div></article><article><span>03</span><div><h3>Build for imperfect conditions</h3><p>Connected devices, offline desktop workflows, and real networks.</p></div></article></div></div></section>
 
     <section class="toolkit-section section-wrap" id="skills"><div class="eyebrow section-kicker">03 / SKILLS</div><div class="toolkit-heading"><h2>Technical range,<br><em>built for delivery.</em></h2><a class="resume-link" href="/Santhosh_Kumar_R_Resume.pdf" download>Full resume <span aria-hidden="true">↗</span></a></div><div class="toolkit-grid"><article><span>01 / LANGUAGES</span><p>JavaScript · TypeScript · Python · Java · HTML · CSS</p></article><article><span>02 / FRONTEND &amp; MOBILE</span><p>React · Next.js · React Native · Redux · MobX · Tailwind CSS · Bootstrap · Material UI</p></article><article><span>03 / BACKEND &amp; APIS</span><p>Node.js · NestJS · Express.js · Spring Boot · FastAPI · Django · REST APIs · OAuth 2.0 · RBAC · Webhooks</p></article><article><span>04 / DATA &amp; AI</span><p>MongoDB · Mongoose · MySQL · PostgreSQL · Vector Search · RAG · LangChain · Prompt Engineering</p></article><article><span>05 / CLOUD &amp; SECURITY</span><p>AWS · GCP · Azure · Google CASA Tier 2</p></article><article><span>06 / PAYMENTS &amp; CONNECTED SYSTEMS</span><p>Stripe · PayPal · LemonSqueezy · MQTT · IoT</p></article><article><span>07 / TOOLS &amp; DESKTOP</span><p>Electron.js · Git · Postman · Figma · WordPress</p></article><article><span>08 / LANGUAGES SPOKEN</span><p>English · Kannada · Tamil</p></article></div></section>
 
-    <section class="experience-section" id="experience"><div class="section-wrap"><div class="eyebrow section-kicker">04 / EXPERIENCE &amp; EDUCATION</div><div class="timeline"><article class="timeline-row"><div class="timeline-date">JUN 2023 — PRESENT</div><div class="timeline-main"><h3>Senior Software Developer <span>· Hanabi Technologies</span></h3><p>Designed the core architecture for AI and connected-device products; built RAG and vector search, three payment gateways, OAuth/RBAC access, MQTT device communication, and offline desktop software. Led the technical workstream for Google CASA Tier 2.</p></div><span class="timeline-type">PRODUCT ENGINEERING</span></article><article class="timeline-row"><div class="timeline-date">DEC 2022 — APR 2023</div><div class="timeline-main"><h3>Software Engineer — Frontend <span>· Youth India e-School</span></h3><p>Assessment and learning systems, responsive web experiences, and a cross-platform HRMS dashboard.</p></div><span class="timeline-type">FRONTEND</span></article><article class="timeline-row education-row"><div class="timeline-date">JUN 2015 — APR 2019</div><div class="timeline-main"><h3>B.E., Mechanical Engineering <span>· K.S.R Institute for Engineering and Technology</span></h3></div><span class="timeline-type">EDUCATION</span></article></div></div></section>
+    <section class="experience-section" id="experience"><div class="section-wrap"><div class="eyebrow section-kicker">04 / EXPERIENCE &amp; EDUCATION</div><div class="timeline"><article class="timeline-row"><div class="timeline-date">JUN 2023 — OCT 2026</div><div class="timeline-main"><h3>Senior Software Developer <span>· Hanabi Technologies</span></h3><p>Designed the core architecture for AI and connected-device products; built RAG and vector search, three payment gateways, OAuth/RBAC access, MQTT device communication, and offline desktop software. Led the technical workstream for Google CASA Tier 2.</p></div><span class="timeline-type">PRODUCT ENGINEERING</span></article><article class="timeline-row"><div class="timeline-date">DEC 2022 — APR 2023</div><div class="timeline-main"><h3>Software Engineer — Frontend <span>· Youth India e-School</span></h3><p>Assessment and learning systems, responsive web experiences, and a cross-platform HRMS dashboard.</p></div><span class="timeline-type">FRONTEND</span></article><article class="timeline-row education-row"><div class="timeline-date">JUN 2015 — APR 2019</div><div class="timeline-main"><h3>B.E., Mechanical Engineering <span>· K.S.R Institute for Engineering and Technology</span></h3></div><span class="timeline-type">EDUCATION</span></article></div></div></section>
 
     <section class="contact-section" id="contact"><div class="section-wrap contact-inner"><div class="eyebrow">NEXT CHAPTER</div><h2>Let’s build software<br>people <em>depend on.</em></h2><p>Currently looking for Senior Software Developer roles.</p><div class="contact-actions"><a class="button button-light" href="mailto:drsanthosh1997@gmail.com">Start a conversation ${arrow}</a><a class="contact-phone" href="tel:+918428497261">+91 84284 97261</a><a class="contact-email" href="mailto:drsanthosh1997@gmail.com">drsanthosh1997@gmail.com</a></div><div class="contact-place">RASIPURAM, INDIA</div></div><div class="contact-coordinate" aria-hidden="true">RASIPURAM<br/>11.46°N / 78.18°E</div></section>
   </main>
   <footer class="footer"><a class="wordmark" href="#top">SK<span>/</span></a><span class="footer-signoff">Made with <svg class="footer-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.3 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></svg> by Santhosh</span><div><a href="https://github.com/SantoshKumarRavi" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/santhosh-kumar-r-497233207" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
 `
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.14, rootMargin: '0px 0px -36px 0px' })
+
+  document.querySelectorAll<HTMLElement>(
+    '.case-study, .result-strip, .approach-intro, .approach-list article, .toolkit-grid article, .timeline-row, .contact-inner',
+  ).forEach((element, index) => {
+    element.classList.add('reveal-on-scroll')
+    element.style.setProperty('--reveal-delay', `${(index % 3) * 90}ms`)
+    revealObserver.observe(element)
+  })
+
+  document.querySelectorAll<HTMLElement>('.skill-node').forEach((node, index) => {
+    node.style.setProperty('--node-index', String(index))
+  })
+}

@@ -47,3 +47,30 @@
 @media(max-width:900px){.topbar .header-contact{gap:8px}.social-links{gap:8px}.header-social{font-size:9px}.topbar .phone-link{font-size:8px}}
 @media(max-width:650px){.social-links{gap:6px}.header-social{font-family:var(--mono);font-size:8px}.social-full{display:none}.social-short{display:inline-grid;min-width:19px;height:19px;place-items:center;border:1px solid #c6d0c6;font-size:7px;letter-spacing:-.04em}.social-linkedin{font-family:Arial,sans-serif;font-weight:700;letter-spacing:-.08em}}
 @media(max-width:390px){.topbar .phone-link{font-size:7px}.social-links{gap:5px}.social-short{min-width:17px;height:17px;font-size:6px}}
+
+/* Quiet motion gives the network graphic life and reveals detail as it enters view. */
+.hero-copy{animation:hero-enter .72s cubic-bezier(.2,.72,.22,1) both}
+.skill-map{animation:map-enter .9s cubic-bezier(.2,.72,.22,1) .08s both}
+.skill-map .skill-node{animation:node-enter .5s cubic-bezier(.2,.72,.22,1) calc(120ms + var(--node-index,0)*32ms) both}
+.map-lines path{animation:map-flow 32s linear infinite}
+.map-lines circle{transform-box:fill-box;transform-origin:center;animation:map-pulse 3.8s ease-in-out infinite}
+.map-lines circle:nth-of-type(3n){animation-delay:1.2s}
+.map-lines circle:nth-of-type(3n + 1){animation-delay:2.3s}
+.availability-dot{animation:status-beacon 3.2s ease-in-out infinite}
+.city-network svg path{stroke-dasharray:3 8;animation:map-flow 42s linear infinite}
+.city-center{animation:city-float 7s ease-in-out infinite}
+.diagram-flow{background-position:0 0;animation:data-travel 18s linear infinite}
+.diagram-flow.flow-two{animation-direction:reverse}
+.reveal-on-scroll{opacity:0;transform:translateY(18px);transition:opacity .62s cubic-bezier(.2,.72,.22,1) var(--reveal-delay,0ms),transform .62s cubic-bezier(.2,.72,.22,1) var(--reveal-delay,0ms)}
+.reveal-on-scroll.is-visible{opacity:1;transform:translateY(0)}
+.case-study{transition:border-color .25s ease,box-shadow .25s ease}
+.case-study:hover{border-color:#aab9ab;box-shadow:0 8px 24px rgba(24,42,36,.07)}
+@keyframes hero-enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes map-enter{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes node-enter{from{opacity:0;translate:0 7px}to{opacity:1;translate:0 0}}
+@keyframes map-flow{to{stroke-dashoffset:-88}}
+@keyframes map-pulse{0%,100%{opacity:.52;scale:.78}50%{opacity:1;scale:1.38}}
+@keyframes status-beacon{0%,100%{box-shadow:0 0 0 4px rgba(243,107,62,.17)}50%{box-shadow:0 0 0 7px rgba(243,107,62,.035)}}
+@keyframes city-float{0%,100%{translate:0 0}50%{translate:0 -5px}}
+@keyframes data-travel{to{background-position:40px 0}}
+@media(prefers-reduced-motion:reduce){.hero-copy,.skill-map,.skill-map .skill-node,.map-lines path,.map-lines circle,.availability-dot,.city-network svg path,.city-center,.diagram-flow{animation:none!important}.reveal-on-scroll{opacity:1;transform:none;transition:none}.case-study{transition:none}}
